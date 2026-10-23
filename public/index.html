@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cross-Rollup Intent Router</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/vendor/chart.umd.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">⇄</div>
+      <div>
+        <h1>Cross-Rollup Intent Router</h1>
+        <p>Say <em>what</em> you want. The router decides <em>where</em> it runs.</p>
+      </div>
+    </div>
+    <div class="live"><span id="live-dot" class="dot"></span><span id="live-text">connecting…</span></div>
+  </header>
+
+  <main>
+    <!-- Rollup monitor -->
+    <section>
+      <div class="section-head">
+        <h2>Execution environments</h2>
+        <span class="hint">Live from 3 local rollups (Anvil). Use the controls to inject congestion or a sequencer outage.</span>
+      </div>
+      <div id="rollups" class="rollup-grid"></div>
+    </section>
+
+    <div class="two-col">
+      <!-- Intent form -->
+      <section class="card" id="intent-card">
+        <h2>1 · Describe your intent</h2>
+        <div class="nl">
+          <input id="nl-input" type="text" placeholder='e.g. "send 100 USDC to Bob as cheap as possible"' />
+          <button id="nl-parse" class="ghost">Parse</button>
+        </div>
+        <form id="intent-form" autocomplete="off">
+          <div class="row">
+            <label>User
+              <select name="user">
+                <option value="alice">Alice</option>
+                <option value="bob">Bob</option>
+                <option value="carol">Carol</option>
+              </select>
+            </label>
+            <label>Intent
+              <div class="seg" data-name="kind">
+                <button type="button" data-v="transfer" class="on">Transfer</button>
+                <button type="button" data-v="payment">Payment</button>
+                <button type="button" data-v="swap">Swap</button>
+              </div>
+            </label>
+          </div>
+          <div class="row">
+            <label>Amount
+              <div class="amount">
+                <input name="amount" type="number" step="any" min="0" value="100" />
+                <select name="token"><option value="usdc">USDC</option><option value="weth">WETH</option></select>
+              </div>
+            </label>
+            <label class="only-transfer only-payment">Recipient
+              <select name="recipient">
+                <option value="bob">Bob</option>
+                <option value="carol">Carol</option>
+                <option value="alice">Alice</option>
+                <option value="merchant">Coffee Shop (merchant)</option>
+              </select>
+            </label>
+            <label class="only-swap hidden">Receive
+              <select name="tokenOut"><option value="weth">WETH</option><option value="usdc">USDC</option></select>
+            </label>
+          </div>
+          <label class="only-payment hidden">Merchant order reference
+            <input name="ref" type="text" value="ORDER-1001" />
+          </label>
+          <label>Routing preference
+            <div class="seg" data-name="preference">
+              <button type="button" data-v="cheapest">💰 Cheapest</button>
+              <button type="button" data-v="balanced" class="on">⚖️ Balanced</button>
+              <button type="button" data-v="fastest">⚡ Fastest</button>
+            </div>
+          </label>
+          <details>
+            <summary>Constraints &amp; demo options</summary>
+            <div class="row three">
+              <label>Max fee (USD)<input name="maxFeeUsd" type="number" step="any" placeholder="none" /></label>
+              <label>Max latency (s)<input name="maxLatencySec" type="number" step="any" placeholder="none" /></label>
+              <label class="only-swap hidden">Slippage (bps)<input name="slippageBps" type="number" value="50" /></label>
+            </div>
+            <label class="check"><input name="simulateOutage" type="checkbox" /> Simulate a sequencer outage on the chosen rollup right after signing (tests safe re-routing)</label>
+          </details>
+          <div class="actions">
+            <button type="button" id="btn-quote" class="secondary">Compare routes</button>
+            <button type="submit" id="btn-exec" class="primary">Sign &amp; execute →</button>
+          </div>
+          <div id="form-error" class="error hidden"></div>
+        </form>
+      </section>
+
+      <!-- Route comparison -->
+      <section class="card" id="route-card">
+        <h2>2 · Route selection <span id="route-pref" class="pill"></span></h2>
+        <div id="routes" class="empty">Click <b>Compare routes</b> to see how each rollup scores for this intent.</div>
+      </section>
+    </div>
+
+    <!-- Execution -->
+    <section class="card" id="exec-card">
+      <h2>3 · Execution status</h2>
+      <div id="exec" class="empty">No intent submitted yet.</div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="card">
+      <nav class="tabs">
+        <button data-tab="history" class="on">Intent history</button>
+        <button data-tab="balances">Balances</button>
+        <button data-tab="analytics">Live analytics</button>
+        <button data-tab="sim">Scalability simulation</button>
+      </nav>
+      <div id="tab-history" class="tab"></div>
+      <div id="tab-balances" class="tab hidden"></div>
+      <div id="tab-analytics" class="tab hidden">
+        <div id="stats-kpis" class="kpis"></div>
+        <div class="chart-grid">
+          <div class="chart-box"><h3>Router vs. static rollup choice (same intents, quotes at decision time)</h3><canvas id="ch-compare"></canvas></div>
+          <div class="chart-box"><h3>Where intents were executed</h3><canvas id="ch-share"></canvas></div>
+        </div>
+      </div>
+      <div id="tab-sim" class="tab hidden">
+        <p class="hint">Offline discrete-time simulation of the three rollups (FIFO sequencers, block gas limits, EIP-1559 base fee, background traffic), using the <b>same routing code</b> as the live router. Intents expire after 15s.</p>
+        <div class="chart-grid">
+          <div class="chart-box"><h3>Confirmed throughput vs. offered load</h3><canvas id="ch-thr"></canvas></div>
+          <div class="chart-box"><h3>Failure (expiry) rate vs. offered load</h3><canvas id="ch-fail"></canvas></div>
+          <div class="chart-box"><h3>Average latency vs. offered load</h3><canvas id="ch-lat"></canvas></div>
+          <div class="chart-box"><h3>Average fee vs. offered load (log scale)</h3><canvas id="ch-fee"></canvas></div>
+          <div class="chart-box wide"><h3>Incident replay: B congested — background ×4.5 (30–60s), C halted (75–100s) — avg latency per 5s window</h3><canvas id="ch-incident"></canvas></div>
+        </div>
+        <div id="sim-table"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>SC6109 · Option 6 · Cross-Rollup Intent Router — local demo network, test keys only.</footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
