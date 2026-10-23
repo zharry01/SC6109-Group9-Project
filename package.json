@@ -1,0 +1,27 @@
+{
+  "name": "cross-rollup-intent-router",
+  "version": "1.0.0",
+  "description": "SC6109 Option 6 - Cross-rollup intent router: users state an outcome, the router picks the best rollup by fee, latency, congestion and success probability.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:contracts": "forge build",
+    "test:contracts": "forge test -vv",
+    "test:unit": "node --test test/unit/*.test.js",
+    "test:e2e": "node --test --test-concurrency=1 test/e2e/*.test.js",
+    "test": "forge test && node --test test/unit/*.test.js && node --test --test-concurrency=1 test/e2e/*.test.js",
+    "demo": "node scripts/demo.js",
+    "chains": "node scripts/chains.js",
+    "start": "node src/server.js",
+    "sim": "node scripts/sim.js",
+    "bench:live": "node scripts/bench-live.js"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "express": "^4.22.3",
+    "viem": "^2.57.7"
+  }
+}
