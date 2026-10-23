@@ -1,0 +1,1937 @@
+{
+  "generatedAt": "2026-10-21T18:12:52.881Z",
+  "params": {
+    "intentGas": 120000,
+    "calldataBytes": 548,
+    "background": {
+      "A": 0.3,
+      "B": 0.2,
+      "C": 0.4
+    },
+    "duration": 120,
+    "ttl": 15,
+    "maxFeeUsd": 0.5,
+    "incidentEvents": [
+      {
+        "rollupId": "B",
+        "from": 30,
+        "to": 60,
+        "bgMultiplier": 4.5
+      },
+      {
+        "rollupId": "C",
+        "from": 75,
+        "to": 100,
+        "halt": true
+      }
+    ],
+    "incidentLambda": 5,
+    "capacityFillsPerSec": {
+      "A": 10,
+      "B": 8.333333333333334,
+      "C": 3.75
+    }
+  },
+  "strategies": [
+    "always A",
+    "always B",
+    "always C",
+    "round-robin",
+    "router: cheapest",
+    "router: balanced"
+  ],
+  "lambdas": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+  ],
+  "sweep": {
+    "always A": [
+      {
+        "lambda": 1,
+        "submitted": 102,
+        "confirmed": 102,
+        "throughput": 0.85,
+        "failRate": 0,
+        "avgLatency": 0.4710784313725327,
+        "p95Latency": 0.9000000000000128,
+        "avgFeeUsd": 0.06768196376416984,
+        "share": {
+          "A": 102
+        }
+      },
+      {
+        "lambda": 2,
+        "submitted": 226,
+        "confirmed": 226,
+        "throughput": 1.8833333333333333,
+        "failRate": 0,
+        "avgLatency": 0.4285398230088333,
+        "p95Latency": 0.9000000000000128,
+        "avgFeeUsd": 0.0677050044627885,
+        "share": {
+          "A": 226
+        }
+      },
+      {
+        "lambda": 4,
+        "submitted": 453,
+        "confirmed": 453,
+        "throughput": 3.775,
+        "failRate": 0,
+        "avgLatency": 0.5079470198675277,
+        "p95Latency": 0.949999999999946,
+        "avgFeeUsd": 0.07352647497969324,
+        "share": {
+          "A": 453
+        }
+      },
+      {
+        "lambda": 6,
+        "submitted": 714,
+        "confirmed": 714,
+        "throughput": 5.95,
+        "failRate": 0,
+        "avgLatency": 1.0264005602240414,
+        "p95Latency": 3.549999999999798,
+        "avgFeeUsd": 0.21614184197899022,
+        "share": {
+          "A": 714
+        }
+      },
+      {
+        "lambda": 8,
+        "submitted": 964,
+        "confirmed": 715,
+        "throughput": 5.958333333333333,
+        "failRate": 0.25829875518672196,
+        "avgLatency": 5.775874125873855,
+        "p95Latency": 14.59999999999917,
+        "avgFeeUsd": 0.2560407910273703,
+        "share": {
+          "A": 715
+        }
+      },
+      {
+        "lambda": 10,
+        "submitted": 1182,
+        "confirmed": 588,
+        "throughput": 4.9,
+        "failRate": 0.5025380710659899,
+        "avgLatency": 8.297959183673154,
+        "p95Latency": 14.799999999999159,
+        "avgFeeUsd": 0.19487445405326795,
+        "share": {
+          "A": 588
+        }
+      },
+      {
+        "lambda": 12,
+        "submitted": 1400,
+        "confirmed": 568,
+        "throughput": 4.733333333333333,
+        "failRate": 0.5942857142857143,
+        "avgLatency": 8.984683098591281,
+        "p95Latency": 14.499999999999183,
+        "avgFeeUsd": 0.1777201212839821,
+        "share": {
+          "A": 568
+        }
+      },
+      {
+        "lambda": 14,
+        "submitted": 1635,
+        "confirmed": 568,
+        "throughput": 4.733333333333333,
+        "failRate": 0.652599388379205,
+        "avgLatency": 9.47544014084484,
+        "p95Latency": 13.35000000000019,
+        "avgFeeUsd": 0.16874975610904314,
+        "share": {
+          "A": 568
+        }
+      },
+      {
+        "lambda": 16,
+        "submitted": 1868,
+        "confirmed": 564,
+        "throughput": 4.7,
+        "failRate": 0.6980728051391862,
+        "avgLatency": 9.821099290779912,
+        "p95Latency": 13.900000000000198,
+        "avgFeeUsd": 0.16059214546724415,
+        "share": {
+          "A": 564
+        }
+      },
+      {
+        "lambda": 18,
+        "submitted": 2089,
+        "confirmed": 565,
+        "throughput": 4.708333333333333,
+        "failRate": 0.7295356629966492,
+        "avgLatency": 9.883185840707736,
+        "p95Latency": 14.0500000000002,
+        "avgFeeUsd": 0.15749782162268466,
+        "share": {
+          "A": 565
+        }
+      },
+      {
+        "lambda": 20,
+        "submitted": 2413,
+        "confirmed": 538,
+        "throughput": 4.483333333333333,
+        "failRate": 0.777041027766266,
+        "avgLatency": 9.860223048326901,
+        "p95Latency": 14.150000000000201,
+        "avgFeeUsd": 0.15506092650534264,
+        "share": {
+          "A": 538
+        }
+      }
+    ],
+    "always B": [
+      {
+        "lambda": 1,
+        "submitted": 102,
+        "confirmed": 102,
+        "throughput": 0.85,
+        "failRate": 0,
+        "avgLatency": 2.2004901960783467,
+        "p95Latency": 3.849999999999781,
+        "avgFeeUsd": 0.012180000000000009,
+        "share": {
+          "B": 102
+        }
+      },
+      {
+        "lambda": 2,
+        "submitted": 226,
+        "confirmed": 226,
+        "throughput": 1.8833333333333333,
+        "failRate": 0,
+        "avgLatency": 1.9869469026547888,
+        "p95Latency": 3.699999999999993,
+        "avgFeeUsd": 0.012181012402573618,
+        "share": {
+          "B": 226
+        }
+      },
+      {
+        "lambda": 4,
+        "submitted": 453,
+        "confirmed": 453,
+        "throughput": 3.775,
+        "failRate": 0,
+        "avgLatency": 1.902207505518684,
+        "p95Latency": 3.7000000000000526,
+        "avgFeeUsd": 0.012428018167306605,
+        "share": {
+          "B": 453
+        }
+      },
+      {
+        "lambda": 6,
+        "submitted": 714,
+        "confirmed": 714,
+        "throughput": 5.95,
+        "failRate": 0,
+        "avgLatency": 2.175980392156772,
+        "p95Latency": 3.9999999999997726,
+        "avgFeeUsd": 0.013812897154961756,
+        "share": {
+          "B": 714
+        }
+      },
+      {
+        "lambda": 8,
+        "submitted": 964,
+        "confirmed": 671,
+        "throughput": 5.591666666666667,
+        "failRate": 0.303941908713693,
+        "avgLatency": 8.236810730252982,
+        "p95Latency": 14.649999999999167,
+        "avgFeeUsd": 0.013854322712612591,
+        "share": {
+          "B": 671
+        }
+      },
+      {
+        "lambda": 10,
+        "submitted": 1182,
+        "confirmed": 353,
+        "throughput": 2.941666666666667,
+        "failRate": 0.7013536379018612,
+        "avgLatency": 8.846742209631595,
+        "p95Latency": 14.449999999999335,
+        "avgFeeUsd": 0.01259712222288867,
+        "share": {
+          "B": 353
+        }
+      },
+      {
+        "lambda": 12,
+        "submitted": 1400,
+        "confirmed": 271,
+        "throughput": 2.2583333333333333,
+        "failRate": 0.8064285714285715,
+        "avgLatency": 8.53154981549822,
+        "p95Latency": 14.349999999999618,
+        "avgFeeUsd": 0.012422396798480397,
+        "share": {
+          "B": 271
+        }
+      },
+      {
+        "lambda": 14,
+        "submitted": 1635,
+        "confirmed": 220,
+        "throughput": 1.8333333333333333,
+        "failRate": 0.8654434250764527,
+        "avgLatency": 8.89522727272737,
+        "p95Latency": 14.750000000000192,
+        "avgFeeUsd": 0.012350841556925058,
+        "share": {
+          "B": 220
+        }
+      },
+      {
+        "lambda": 16,
+        "submitted": 1868,
+        "confirmed": 191,
+        "throughput": 1.5916666666666666,
+        "failRate": 0.8977516059957173,
+        "avgLatency": 8.667801047120504,
+        "p95Latency": 14.400000000000205,
+        "avgFeeUsd": 0.012314931523521854,
+        "share": {
+          "B": 191
+        }
+      },
+      {
+        "lambda": 18,
+        "submitted": 2089,
+        "confirmed": 182,
+        "throughput": 1.5166666666666666,
+        "failRate": 0.9128769746290091,
+        "avgLatency": 8.521153846153924,
+        "p95Latency": 14.250000000000203,
+        "avgFeeUsd": 0.012303475407334234,
+        "share": {
+          "B": 182
+        }
+      },
+      {
+        "lambda": 20,
+        "submitted": 2413,
+        "confirmed": 158,
+        "throughput": 1.3166666666666667,
+        "failRate": 0.934521342726896,
+        "avgLatency": 8.243037974683606,
+        "p95Latency": 13.900000000000167,
+        "avgFeeUsd": 0.01227800864650725,
+        "share": {
+          "B": 158
+        }
+      }
+    ],
+    "always C": [
+      {
+        "lambda": 1,
+        "submitted": 102,
+        "confirmed": 102,
+        "throughput": 0.85,
+        "failRate": 0,
+        "avgLatency": 1.0877450980391759,
+        "p95Latency": 1.899999999999892,
+        "avgFeeUsd": 0.027704448582566075,
+        "share": {
+          "C": 102
+        }
+      },
+      {
+        "lambda": 2,
+        "submitted": 226,
+        "confirmed": 226,
+        "throughput": 1.8833333333333333,
+        "failRate": 0,
+        "avgLatency": 1.6484513274335608,
+        "p95Latency": 3.149999999999821,
+        "avgFeeUsd": 0.04282352994466863,
+        "share": {
+          "C": 226
+        }
+      },
+      {
+        "lambda": 4,
+        "submitted": 453,
+        "confirmed": 169,
+        "throughput": 1.4083333333333334,
+        "failRate": 0.6269315673289183,
+        "avgLatency": 7.630473372780819,
+        "p95Latency": 14.549999999999173,
+        "avgFeeUsd": 0.04217358702160904,
+        "share": {
+          "C": 169
+        }
+      },
+      {
+        "lambda": 6,
+        "submitted": 714,
+        "confirmed": 83,
+        "throughput": 0.6916666666666667,
+        "failRate": 0.8837535014005602,
+        "avgLatency": 8.251807228915748,
+        "p95Latency": 14.500000000000206,
+        "avgFeeUsd": 0.027744749580720252,
+        "share": {
+          "C": 83
+        }
+      },
+      {
+        "lambda": 8,
+        "submitted": 964,
+        "confirmed": 70,
+        "throughput": 0.5833333333333334,
+        "failRate": 0.9273858921161826,
+        "avgLatency": 7.915000000000058,
+        "p95Latency": 13.950000000000198,
+        "avgFeeUsd": 0.02759307663868462,
+        "share": {
+          "C": 70
+        }
+      },
+      {
+        "lambda": 10,
+        "submitted": 1182,
+        "confirmed": 69,
+        "throughput": 0.575,
+        "failRate": 0.9416243654822335,
+        "avgLatency": 8.00144927536237,
+        "p95Latency": 14.450000000000161,
+        "avgFeeUsd": 0.027578523967335362,
+        "share": {
+          "C": 69
+        }
+      },
+      {
+        "lambda": 12,
+        "submitted": 1400,
+        "confirmed": 68,
+        "throughput": 0.5666666666666667,
+        "failRate": 0.9514285714285714,
+        "avgLatency": 8.488970588235341,
+        "p95Latency": 14.85000000000016,
+        "avgFeeUsd": 0.027568236374945685,
+        "share": {
+          "C": 68
+        }
+      },
+      {
+        "lambda": 14,
+        "submitted": 1635,
+        "confirmed": 61,
+        "throughput": 0.5083333333333333,
+        "failRate": 0.962691131498471,
+        "avgLatency": 8.325409836065607,
+        "p95Latency": 14.200000000000127,
+        "avgFeeUsd": 0.027526235938105437,
+        "share": {
+          "C": 61
+        }
+      },
+      {
+        "lambda": 16,
+        "submitted": 1868,
+        "confirmed": 60,
+        "throughput": 0.5,
+        "failRate": 0.9678800856531049,
+        "avgLatency": 8.458333333333364,
+        "p95Latency": 14.800000000000125,
+        "avgFeeUsd": 0.027521262375959556,
+        "share": {
+          "C": 60
+        }
+      },
+      {
+        "lambda": 18,
+        "submitted": 2089,
+        "confirmed": 56,
+        "throughput": 0.4666666666666667,
+        "failRate": 0.9731929152704644,
+        "avgLatency": 7.952678571428593,
+        "p95Latency": 13.700000000000092,
+        "avgFeeUsd": 0.027495774675526847,
+        "share": {
+          "C": 56
+        }
+      },
+      {
+        "lambda": 20,
+        "submitted": 2413,
+        "confirmed": 53,
+        "throughput": 0.44166666666666665,
+        "failRate": 0.9780356402818069,
+        "avgLatency": 7.647169811320772,
+        "p95Latency": 13.650000000000093,
+        "avgFeeUsd": 0.027481123613930316,
+        "share": {
+          "C": 53
+        }
+      }
+    ],
+    "round-robin": [
+      {
+        "lambda": 1,
+        "submitted": 102,
+        "confirmed": 102,
+        "throughput": 0.85,
+        "failRate": 0,
+        "avgLatency": 1.2269607843136796,
+        "p95Latency": 3.549999999999798,
+        "avgFeeUsd": 0.03572079010923627,
+        "share": {
+          "A": 34,
+          "C": 34,
+          "B": 34
+        }
+      },
+      {
+        "lambda": 2,
+        "submitted": 226,
+        "confirmed": 226,
+        "throughput": 1.8833333333333333,
+        "failRate": 0,
+        "avgLatency": 1.1243362831857955,
+        "p95Latency": 3.3499999999998096,
+        "avgFeeUsd": 0.03593167503884568,
+        "share": {
+          "A": 76,
+          "C": 75,
+          "B": 75
+        }
+      },
+      {
+        "lambda": 4,
+        "submitted": 453,
+        "confirmed": 453,
+        "throughput": 3.775,
+        "failRate": 0,
+        "avgLatency": 1.1385209713023792,
+        "p95Latency": 3.199999999999825,
+        "avgFeeUsd": 0.036486034025509075,
+        "share": {
+          "A": 151,
+          "C": 151,
+          "B": 151
+        }
+      },
+      {
+        "lambda": 6,
+        "submitted": 714,
+        "confirmed": 714,
+        "throughput": 5.95,
+        "failRate": 0,
+        "avgLatency": 1.2766806722688537,
+        "p95Latency": 3.2999999999998195,
+        "avgFeeUsd": 0.041801488729856465,
+        "share": {
+          "A": 238,
+          "C": 238,
+          "B": 238
+        }
+      },
+      {
+        "lambda": 8,
+        "submitted": 964,
+        "confirmed": 964,
+        "throughput": 8.033333333333333,
+        "failRate": 0,
+        "avgLatency": 2.910892116182432,
+        "p95Latency": 10.049999999999429,
+        "avgFeeUsd": 0.061736396164476896,
+        "share": {
+          "A": 322,
+          "C": 321,
+          "B": 321
+        }
+      },
+      {
+        "lambda": 10,
+        "submitted": 1182,
+        "confirmed": 1000,
+        "throughput": 8.333333333333334,
+        "failRate": 0.1539763113367174,
+        "avgLatency": 2.7514999999998904,
+        "p95Latency": 13.349999999999241,
+        "avgFeeUsd": 0.04923831163230443,
+        "share": {
+          "A": 394,
+          "C": 212,
+          "B": 394
+        }
+      },
+      {
+        "lambda": 12,
+        "submitted": 1400,
+        "confirmed": 1088,
+        "throughput": 9.066666666666666,
+        "failRate": 0.22285714285714286,
+        "avgLatency": 2.2684283088234602,
+        "p95Latency": 10.999999999999872,
+        "avgFeeUsd": 0.04604532365727587,
+        "share": {
+          "A": 467,
+          "B": 467,
+          "C": 154
+        }
+      },
+      {
+        "lambda": 14,
+        "submitted": 1635,
+        "confirmed": 1199,
+        "throughput": 9.991666666666667,
+        "failRate": 0.2666666666666667,
+        "avgLatency": 1.889658048373608,
+        "p95Latency": 7.800000000000111,
+        "avgFeeUsd": 0.061413888666252386,
+        "share": {
+          "A": 545,
+          "B": 545,
+          "C": 109
+        }
+      },
+      {
+        "lambda": 16,
+        "submitted": 1868,
+        "confirmed": 1341,
+        "throughput": 11.175,
+        "failRate": 0.2821199143468951,
+        "avgLatency": 1.7144668158090617,
+        "p95Latency": 5.200000000000016,
+        "avgFeeUsd": 0.08790838702221915,
+        "share": {
+          "A": 623,
+          "B": 623,
+          "C": 95
+        }
+      },
+      {
+        "lambda": 18,
+        "submitted": 2089,
+        "confirmed": 1488,
+        "throughput": 12.4,
+        "failRate": 0.2876974629009095,
+        "avgLatency": 1.8653561827956537,
+        "p95Latency": 4.699999999999983,
+        "avgFeeUsd": 0.11744266444431502,
+        "share": {
+          "A": 697,
+          "B": 696,
+          "C": 95
+        }
+      },
+      {
+        "lambda": 20,
+        "submitted": 2413,
+        "confirmed": 1686,
+        "throughput": 14.05,
+        "failRate": 0.30128470783257355,
+        "avgLatency": 3.1135231316724794,
+        "p95Latency": 10.499999999999403,
+        "avgFeeUsd": 0.1425796826926564,
+        "share": {
+          "A": 805,
+          "B": 804,
+          "C": 77
+        }
+      }
+    ],
+    "router: cheapest": [
+      {
+        "lambda": 1,
+        "submitted": 102,
+        "confirmed": 102,
+        "throughput": 0.85,
+        "failRate": 0,
+        "avgLatency": 2.2004901960783467,
+        "p95Latency": 3.849999999999781,
+        "avgFeeUsd": 0.012180000000000009,
+        "share": {
+          "B": 102
+        }
+      },
+      {
+        "lambda": 2,
+        "submitted": 226,
+        "confirmed": 226,
+        "throughput": 1.8833333333333333,
+        "failRate": 0,
+        "avgLatency": 1.9869469026547888,
+        "p95Latency": 3.699999999999993,
+        "avgFeeUsd": 0.012181012402573618,
+        "share": {
+          "B": 226
+        }
+      },
+      {
+        "lambda": 4,
+        "submitted": 453,
+        "confirmed": 453,
+        "throughput": 3.775,
+        "failRate": 0,
+        "avgLatency": 1.902207505518684,
+        "p95Latency": 3.7000000000000526,
+        "avgFeeUsd": 0.012428018167306605,
+        "share": {
+          "B": 453
+        }
+      },
+      {
+        "lambda": 6,
+        "submitted": 714,
+        "confirmed": 714,
+        "throughput": 5.95,
+        "failRate": 0,
+        "avgLatency": 2.0254201680671446,
+        "p95Latency": 3.700000000000035,
+        "avgFeeUsd": 0.014076282138084598,
+        "share": {
+          "B": 692,
+          "C": 22
+        }
+      },
+      {
+        "lambda": 8,
+        "submitted": 964,
+        "confirmed": 964,
+        "throughput": 8.033333333333333,
+        "failRate": 0,
+        "avgLatency": 2.497665975103629,
+        "p95Latency": 4.649999999999736,
+        "avgFeeUsd": 0.01740032560192739,
+        "share": {
+          "B": 804,
+          "C": 160
+        }
+      },
+      {
+        "lambda": 10,
+        "submitted": 1182,
+        "confirmed": 1182,
+        "throughput": 9.85,
+        "failRate": 0,
+        "avgLatency": 6.517131979695122,
+        "p95Latency": 11.59999999999934,
+        "avgFeeUsd": 0.023942762356070058,
+        "share": {
+          "B": 865,
+          "C": 205,
+          "A": 112
+        }
+      },
+      {
+        "lambda": 12,
+        "submitted": 1400,
+        "confirmed": 1400,
+        "throughput": 11.666666666666666,
+        "failRate": 0,
+        "avgLatency": 7.010142857142538,
+        "p95Latency": 11.899999999999324,
+        "avgFeeUsd": 0.030629065424535914,
+        "share": {
+          "B": 873,
+          "C": 223,
+          "A": 304
+        }
+      },
+      {
+        "lambda": 14,
+        "submitted": 1635,
+        "confirmed": 1635,
+        "throughput": 13.625,
+        "failRate": 0,
+        "avgLatency": 7.0332415902137635,
+        "p95Latency": 11.94999999999932,
+        "avgFeeUsd": 0.049200385773799274,
+        "share": {
+          "B": 876,
+          "C": 284,
+          "A": 475
+        }
+      },
+      {
+        "lambda": 16,
+        "submitted": 1868,
+        "confirmed": 1799,
+        "throughput": 14.991666666666667,
+        "failRate": 0.03693790149892928,
+        "avgLatency": 7.271845469705097,
+        "p95Latency": 11.94999999999932,
+        "avgFeeUsd": 0.09349162766155444,
+        "share": {
+          "B": 881,
+          "C": 312,
+          "A": 606
+        }
+      },
+      {
+        "lambda": 18,
+        "submitted": 2089,
+        "confirmed": 1808,
+        "throughput": 15.066666666666666,
+        "failRate": 0.1345141215892771,
+        "avgLatency": 8.69820243362793,
+        "p95Latency": 11.94999999999932,
+        "avgFeeUsd": 0.0916568666584604,
+        "share": {
+          "B": 884,
+          "C": 315,
+          "A": 609
+        }
+      },
+      {
+        "lambda": 20,
+        "submitted": 2413,
+        "confirmed": 1848,
+        "throughput": 15.4,
+        "failRate": 0.23414836303356812,
+        "avgLatency": 9.058874458874087,
+        "p95Latency": 11.949999999999328,
+        "avgFeeUsd": 0.09365680151161289,
+        "share": {
+          "B": 884,
+          "C": 317,
+          "A": 647
+        }
+      }
+    ],
+    "router: balanced": [
+      {
+        "lambda": 1,
+        "submitted": 102,
+        "confirmed": 102,
+        "throughput": 0.85,
+        "failRate": 0,
+        "avgLatency": 1.095098039215646,
+        "p95Latency": 1.899999999999892,
+        "avgFeeUsd": 0.027213909005266376,
+        "share": {
+          "C": 99,
+          "B": 3
+        }
+      },
+      {
+        "lambda": 2,
+        "submitted": 226,
+        "confirmed": 226,
+        "throughput": 1.8833333333333333,
+        "failRate": 0,
+        "avgLatency": 1.2867256637167621,
+        "p95Latency": 2.549999999999992,
+        "avgFeeUsd": 0.026579479773676685,
+        "share": {
+          "C": 169,
+          "B": 57
+        }
+      },
+      {
+        "lambda": 4,
+        "submitted": 453,
+        "confirmed": 453,
+        "throughput": 3.775,
+        "failRate": 0,
+        "avgLatency": 1.690838852097055,
+        "p95Latency": 3.450000000000049,
+        "avgFeeUsd": 0.01947266028710597,
+        "share": {
+          "C": 167,
+          "B": 286
+        }
+      },
+      {
+        "lambda": 6,
+        "submitted": 714,
+        "confirmed": 714,
+        "throughput": 5.95,
+        "failRate": 0,
+        "avgLatency": 1.9221288515405368,
+        "p95Latency": 3.549999999999798,
+        "avgFeeUsd": 0.017642431102500297,
+        "share": {
+          "C": 181,
+          "B": 533
+        }
+      },
+      {
+        "lambda": 8,
+        "submitted": 964,
+        "confirmed": 964,
+        "throughput": 8.033333333333333,
+        "failRate": 0,
+        "avgLatency": 2.1460062240663023,
+        "p95Latency": 3.849999999999781,
+        "avgFeeUsd": 0.020637272300095197,
+        "share": {
+          "C": 200,
+          "B": 724,
+          "A": 40
+        }
+      },
+      {
+        "lambda": 10,
+        "submitted": 1182,
+        "confirmed": 1182,
+        "throughput": 9.85,
+        "failRate": 0,
+        "avgLatency": 2.2947969543146374,
+        "p95Latency": 3.950000000000056,
+        "avgFeeUsd": 0.026731236484753933,
+        "share": {
+          "C": 209,
+          "B": 797,
+          "A": 176
+        }
+      },
+      {
+        "lambda": 12,
+        "submitted": 1400,
+        "confirmed": 1400,
+        "throughput": 11.666666666666666,
+        "failRate": 0,
+        "avgLatency": 2.9879642857141895,
+        "p95Latency": 6.500000000000092,
+        "avgFeeUsd": 0.03299773718259658,
+        "share": {
+          "C": 220,
+          "B": 822,
+          "A": 358
+        }
+      },
+      {
+        "lambda": 14,
+        "submitted": 1635,
+        "confirmed": 1635,
+        "throughput": 13.625,
+        "failRate": 0,
+        "avgLatency": 5.235412844036485,
+        "p95Latency": 11.149999999999366,
+        "avgFeeUsd": 0.04730857958506253,
+        "share": {
+          "C": 261,
+          "B": 873,
+          "A": 501
+        }
+      },
+      {
+        "lambda": 16,
+        "submitted": 1868,
+        "confirmed": 1825,
+        "throughput": 15.208333333333334,
+        "failRate": 0.02301927194860809,
+        "avgLatency": 6.216438356164102,
+        "p95Latency": 11.699999999999342,
+        "avgFeeUsd": 0.09160846371749765,
+        "share": {
+          "C": 312,
+          "B": 877,
+          "A": 636
+        }
+      },
+      {
+        "lambda": 18,
+        "submitted": 2089,
+        "confirmed": 1826,
+        "throughput": 15.216666666666667,
+        "failRate": 0.1258975586404979,
+        "avgLatency": 7.123767798466281,
+        "p95Latency": 11.899999999999324,
+        "avgFeeUsd": 0.0958340383519401,
+        "share": {
+          "C": 314,
+          "B": 882,
+          "A": 630
+        }
+      },
+      {
+        "lambda": 20,
+        "submitted": 2413,
+        "confirmed": 1857,
+        "throughput": 15.475,
+        "failRate": 0.2304185661002901,
+        "avgLatency": 8.558669897684068,
+        "p95Latency": 11.94999999999932,
+        "avgFeeUsd": 0.09654498902613576,
+        "share": {
+          "C": 316,
+          "B": 880,
+          "A": 661
+        }
+      }
+    ]
+  },
+  "incident": {
+    "always A": {
+      "submitted": 582,
+      "confirmed": 582,
+      "throughput": 4.85,
+      "failRate": 0,
+      "avgLatency": 0.5400343642611443,
+      "p95Latency": 1.0499999999999403,
+      "avgFeeUsd": 0.11306821767677658,
+      "share": {
+        "A": 582
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "avgLatency": 0.42826086956521636,
+          "failRate": 0,
+          "avgFeeUsd": 0.0677236241730002
+        },
+        {
+          "t": 5,
+          "avgLatency": 0.6020000000000024,
+          "failRate": 0,
+          "avgFeeUsd": 0.06789406459914567
+        },
+        {
+          "t": 10,
+          "avgLatency": 0.4038461538461596,
+          "failRate": 0,
+          "avgFeeUsd": 0.06802774322127977
+        },
+        {
+          "t": 15,
+          "avgLatency": 0.44444444444445075,
+          "failRate": 0,
+          "avgFeeUsd": 0.06818587946075093
+        },
+        {
+          "t": 20,
+          "avgLatency": 0.350000000000005,
+          "failRate": 0,
+          "avgFeeUsd": 0.06834824125792548
+        },
+        {
+          "t": 25,
+          "avgLatency": 0.4052631578947426,
+          "failRate": 0,
+          "avgFeeUsd": 0.0684212016665785
+        },
+        {
+          "t": 30,
+          "avgLatency": 0.6962962962962833,
+          "failRate": 0,
+          "avgFeeUsd": 0.06884084180882553
+        },
+        {
+          "t": 35,
+          "avgLatency": 0.5316666666666364,
+          "failRate": 0,
+          "avgFeeUsd": 0.06962521729972936
+        },
+        {
+          "t": 40,
+          "avgLatency": 0.45681818181815587,
+          "failRate": 0,
+          "avgFeeUsd": 0.07050475124182161
+        },
+        {
+          "t": 45,
+          "avgLatency": 0.5681818181817859,
+          "failRate": 0,
+          "avgFeeUsd": 0.07137717893617117
+        },
+        {
+          "t": 50,
+          "avgLatency": 0.6031249999999657,
+          "failRate": 0,
+          "avgFeeUsd": 0.07319599147539389
+        },
+        {
+          "t": 55,
+          "avgLatency": 0.5027777777777492,
+          "failRate": 0,
+          "avgFeeUsd": 0.07630416723622056
+        },
+        {
+          "t": 60,
+          "avgLatency": 0.45749999999997615,
+          "failRate": 0,
+          "avgFeeUsd": 0.07775236574116612
+        },
+        {
+          "t": 65,
+          "avgLatency": 0.5136363636363345,
+          "failRate": 0,
+          "avgFeeUsd": 0.08103082698031937
+        },
+        {
+          "t": 70,
+          "avgLatency": 0.7693548387096337,
+          "failRate": 0,
+          "avgFeeUsd": 0.08507327729355287
+        },
+        {
+          "t": 75,
+          "avgLatency": 0.5605263157894418,
+          "failRate": 0,
+          "avgFeeUsd": 0.0935700465883345
+        },
+        {
+          "t": 80,
+          "avgLatency": 0.6124999999999652,
+          "failRate": 0,
+          "avgFeeUsd": 0.09616394018936894
+        },
+        {
+          "t": 85,
+          "avgLatency": 0.4499999999999744,
+          "failRate": 0,
+          "avgFeeUsd": 0.10170624553993983
+        },
+        {
+          "t": 90,
+          "avgLatency": 0.4879310344827309,
+          "failRate": 0,
+          "avgFeeUsd": 0.11831772356991743
+        },
+        {
+          "t": 95,
+          "avgLatency": 0.46296296296293665,
+          "failRate": 0,
+          "avgFeeUsd": 0.1404528188799097
+        },
+        {
+          "t": 100,
+          "avgLatency": 0.6902777777777386,
+          "failRate": 0,
+          "avgFeeUsd": 0.17394703245578588
+        },
+        {
+          "t": 105,
+          "avgLatency": 0.52749999999997,
+          "failRate": 0,
+          "avgFeeUsd": 0.21492200733046746
+        },
+        {
+          "t": 110,
+          "avgLatency": 0.5395833333333027,
+          "failRate": 0,
+          "avgFeeUsd": 0.23051339947679558
+        },
+        {
+          "t": 115,
+          "avgLatency": 0.564102564102532,
+          "failRate": 0,
+          "avgFeeUsd": 0.29307761520768744
+        }
+      ]
+    },
+    "always B": {
+      "submitted": 582,
+      "confirmed": 570,
+      "throughput": 4.75,
+      "failRate": 0.020618556701030966,
+      "avgLatency": 6.5842982456136925,
+      "p95Latency": 13.499999999999233,
+      "avgFeeUsd": 0.014239494351998734,
+      "share": {
+        "B": 570
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "avgLatency": 2.149999999999994,
+          "failRate": 0,
+          "avgFeeUsd": 0.01218451956521739
+        },
+        {
+          "t": 5,
+          "avgLatency": 2.282000000000016,
+          "failRate": 0,
+          "avgFeeUsd": 0.012210823801875003
+        },
+        {
+          "t": 10,
+          "avgLatency": 1.8346153846154107,
+          "failRate": 0,
+          "avgFeeUsd": 0.01224407538609375
+        },
+        {
+          "t": 15,
+          "avgLatency": 1.7555555555555808,
+          "failRate": 0,
+          "avgFeeUsd": 0.012259809396311034
+        },
+        {
+          "t": 20,
+          "avgLatency": 1.4071428571428772,
+          "failRate": 0,
+          "avgFeeUsd": 0.012300015506177906
+        },
+        {
+          "t": 25,
+          "avgLatency": 2.5000000000000293,
+          "failRate": 0,
+          "avgFeeUsd": 0.012309883187755543
+        },
+        {
+          "t": 30,
+          "avgLatency": 2.118518518518437,
+          "failRate": 0,
+          "avgFeeUsd": 0.012342190030890302
+        },
+        {
+          "t": 35,
+          "avgLatency": 4.8983333333330545,
+          "failRate": 0,
+          "avgFeeUsd": 0.012480328739893888
+        },
+        {
+          "t": 40,
+          "avgLatency": 6.7931818181814325,
+          "failRate": 0,
+          "avgFeeUsd": 0.012641298550805306
+        },
+        {
+          "t": 45,
+          "avgLatency": 9.313636363635835,
+          "failRate": 0,
+          "avgFeeUsd": 0.012822299984045014
+        },
+        {
+          "t": 50,
+          "avgLatency": 11.428124999999355,
+          "failRate": 0,
+          "avgFeeUsd": 0.013070480638290978
+        },
+        {
+          "t": 55,
+          "avgLatency": 13.242857142856398,
+          "failRate": 0.2222222222222222,
+          "avgFeeUsd": 0.013341412499447421
+        },
+        {
+          "t": 60,
+          "avgLatency": 12.89583333333261,
+          "failRate": 0.4,
+          "avgFeeUsd": 0.013600015161994718
+        },
+        {
+          "t": 65,
+          "avgLatency": 13.122727272726525,
+          "failRate": 0,
+          "avgFeeUsd": 0.01382251705724406
+        },
+        {
+          "t": 70,
+          "avgLatency": 12.066129032257377,
+          "failRate": 0,
+          "avgFeeUsd": 0.014112464671268652
+        },
+        {
+          "t": 75,
+          "avgLatency": 10.971052631578324,
+          "failRate": 0,
+          "avgFeeUsd": 0.014360865853473912
+        },
+        {
+          "t": 80,
+          "avgLatency": 9.937499999999435,
+          "failRate": 0,
+          "avgFeeUsd": 0.014653851038826772
+        },
+        {
+          "t": 85,
+          "avgLatency": 8.05740740740695,
+          "failRate": 0,
+          "avgFeeUsd": 0.014968723376474195
+        },
+        {
+          "t": 90,
+          "avgLatency": 7.791379310344384,
+          "failRate": 0,
+          "avgFeeUsd": 0.015417741046722956
+        },
+        {
+          "t": 95,
+          "avgLatency": 6.774074074073688,
+          "failRate": 0,
+          "avgFeeUsd": 0.015878154411338625
+        },
+        {
+          "t": 100,
+          "avgLatency": 6.695833333332953,
+          "failRate": 0,
+          "avgFeeUsd": 0.016462083119044384
+        },
+        {
+          "t": 105,
+          "avgLatency": 5.327499999999697,
+          "failRate": 0,
+          "avgFeeUsd": 0.01693279779660426
+        },
+        {
+          "t": 110,
+          "avgLatency": 3.8229166666664494,
+          "failRate": 0,
+          "avgFeeUsd": 0.01753317322655429
+        },
+        {
+          "t": 115,
+          "avgLatency": 3.789743589743374,
+          "failRate": 0,
+          "avgFeeUsd": 0.01840181440700104
+        }
+      ]
+    },
+    "always C": {
+      "submitted": 582,
+      "confirmed": 126,
+      "throughput": 1.05,
+      "failRate": 0.7835051546391752,
+      "avgLatency": 8.617063492063462,
+      "p95Latency": 13.999999999999488,
+      "avgFeeUsd": 0.02853151804740076,
+      "share": {
+        "C": 126
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "avgLatency": 2.5086956521739068,
+          "failRate": 0,
+          "avgFeeUsd": 0.027374365149456525
+        },
+        {
+          "t": 5,
+          "avgLatency": 6.432000000000076,
+          "failRate": 0,
+          "avgFeeUsd": 0.027651578691357422
+        },
+        {
+          "t": 10,
+          "avgLatency": 7.738461538461649,
+          "failRate": 0,
+          "avgFeeUsd": 0.027988557014240856
+        },
+        {
+          "t": 15,
+          "avgLatency": 10.320370370370517,
+          "failRate": 0,
+          "avgFeeUsd": 0.028542262784664815
+        },
+        {
+          "t": 20,
+          "avgLatency": 11.728571428571431,
+          "failRate": 0,
+          "avgFeeUsd": 0.02923615507631181
+        },
+        {
+          "t": 25,
+          "avgLatency": 13.302631578946949,
+          "failRate": 0,
+          "avgFeeUsd": 0.030240674554858342
+        },
+        {
+          "t": 30,
+          "avgLatency": 14.209999999999292,
+          "failRate": 0.8148148148148149,
+          "avgFeeUsd": 0.031140016853861453
+        },
+        {
+          "t": 35,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 40,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 45,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 50,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 55,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 60,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 65,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 70,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 75,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 80,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 85,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 90,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 95,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 100,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 105,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 110,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        },
+        {
+          "t": 115,
+          "avgLatency": null,
+          "failRate": 1,
+          "avgFeeUsd": null
+        }
+      ]
+    },
+    "round-robin": {
+      "submitted": 582,
+      "confirmed": 518,
+      "throughput": 4.316666666666666,
+      "failRate": 0.10996563573883167,
+      "avgLatency": 1.770463320463258,
+      "p95Latency": 4.449999999999747,
+      "avgFeeUsd": 0.03792911624665868,
+      "share": {
+        "A": 194,
+        "C": 130,
+        "B": 194
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "avgLatency": 1.2217391304347796,
+          "failRate": 0,
+          "avgFeeUsd": 0.036090657971014475
+        },
+        {
+          "t": 5,
+          "avgLatency": 1.2480000000000082,
+          "failRate": 0,
+          "avgFeeUsd": 0.03541625145323466
+        },
+        {
+          "t": 10,
+          "avgLatency": 0.9115384615384745,
+          "failRate": 0,
+          "avgFeeUsd": 0.03822798081138341
+        },
+        {
+          "t": 15,
+          "avgLatency": 1.050000000000015,
+          "failRate": 0,
+          "avgFeeUsd": 0.03578804436438441
+        },
+        {
+          "t": 20,
+          "avgLatency": 0.9750000000000139,
+          "failRate": 0,
+          "avgFeeUsd": 0.033525685672315994
+        },
+        {
+          "t": 25,
+          "avgLatency": 1.136842105263172,
+          "failRate": 0,
+          "avgFeeUsd": 0.03749448831604796
+        },
+        {
+          "t": 30,
+          "avgLatency": 1.1907407407407073,
+          "failRate": 0,
+          "avgFeeUsd": 0.03585295543484933
+        },
+        {
+          "t": 35,
+          "avgLatency": 1.1149999999999367,
+          "failRate": 0,
+          "avgFeeUsd": 0.03592703827187019
+        },
+        {
+          "t": 40,
+          "avgLatency": 1.6045454545453632,
+          "failRate": 0,
+          "avgFeeUsd": 0.03497247875199506
+        },
+        {
+          "t": 45,
+          "avgLatency": 1.3409090909090147,
+          "failRate": 0,
+          "avgFeeUsd": 0.03580237615647197
+        },
+        {
+          "t": 50,
+          "avgLatency": 1.6249999999999076,
+          "failRate": 0,
+          "avgFeeUsd": 0.03656260234068583
+        },
+        {
+          "t": 55,
+          "avgLatency": 1.9416666666665572,
+          "failRate": 0,
+          "avgFeeUsd": 0.03656751378326201
+        },
+        {
+          "t": 60,
+          "avgLatency": 0.9999999999999456,
+          "failRate": 0,
+          "avgFeeUsd": 0.03797417835170004
+        },
+        {
+          "t": 65,
+          "avgLatency": 1.1613636363635704,
+          "failRate": 0,
+          "avgFeeUsd": 0.035840231256176185
+        },
+        {
+          "t": 70,
+          "avgLatency": 1.4099999999999198,
+          "failRate": 0.19354838709677424,
+          "avgFeeUsd": 0.03829677695198284
+        },
+        {
+          "t": 75,
+          "avgLatency": 1.0076923076922504,
+          "failRate": 0.3157894736842105,
+          "avgFeeUsd": 0.04229348258015743
+        },
+        {
+          "t": 80,
+          "avgLatency": 1.6863636363635406,
+          "failRate": 0.3125,
+          "avgFeeUsd": 0.03764820766638308
+        },
+        {
+          "t": 85,
+          "avgLatency": 1.336111111111035,
+          "failRate": 0.33333333333333337,
+          "avgFeeUsd": 0.04014071454362853
+        },
+        {
+          "t": 90,
+          "avgLatency": 0.9263157894736316,
+          "failRate": 0.3448275862068966,
+          "avgFeeUsd": 0.0415913340227961
+        },
+        {
+          "t": 95,
+          "avgLatency": 1.1777777777777108,
+          "failRate": 0.33333333333333337,
+          "avgFeeUsd": 0.04012445372402549
+        },
+        {
+          "t": 100,
+          "avgLatency": 1.5458333333332455,
+          "failRate": 0.33333333333333337,
+          "avgFeeUsd": 0.04010590703639471
+        },
+        {
+          "t": 105,
+          "avgLatency": 2.8933333333331688,
+          "failRate": 0.25,
+          "avgFeeUsd": 0.03848990430731188
+        },
+        {
+          "t": 110,
+          "avgLatency": 4.784090909090637,
+          "failRate": 0.08333333333333337,
+          "avgFeeUsd": 0.04151573547417453
+        },
+        {
+          "t": 115,
+          "avgLatency": 5.229487179487141,
+          "failRate": 0,
+          "avgFeeUsd": 0.04354128638230141
+        }
+      ]
+    },
+    "router: cheapest": {
+      "submitted": 582,
+      "confirmed": 582,
+      "throughput": 4.85,
+      "failRate": 0,
+      "avgLatency": 2.5763745704466188,
+      "p95Latency": 6.549999999999635,
+      "avgFeeUsd": 0.015541792932178984,
+      "share": {
+        "B": 505,
+        "C": 77
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "avgLatency": 2.149999999999994,
+          "failRate": 0,
+          "avgFeeUsd": 0.01218451956521739
+        },
+        {
+          "t": 5,
+          "avgLatency": 2.282000000000016,
+          "failRate": 0,
+          "avgFeeUsd": 0.012210823801875003
+        },
+        {
+          "t": 10,
+          "avgLatency": 1.8346153846154107,
+          "failRate": 0,
+          "avgFeeUsd": 0.01224407538609375
+        },
+        {
+          "t": 15,
+          "avgLatency": 1.7555555555555808,
+          "failRate": 0,
+          "avgFeeUsd": 0.012259809396311034
+        },
+        {
+          "t": 20,
+          "avgLatency": 1.4071428571428772,
+          "failRate": 0,
+          "avgFeeUsd": 0.012300015506177906
+        },
+        {
+          "t": 25,
+          "avgLatency": 2.5000000000000293,
+          "failRate": 0,
+          "avgFeeUsd": 0.012309883187755543
+        },
+        {
+          "t": 30,
+          "avgLatency": 2.0351851851851084,
+          "failRate": 0,
+          "avgFeeUsd": 0.012894572910611779
+        },
+        {
+          "t": 35,
+          "avgLatency": 2.17333333333321,
+          "failRate": 0,
+          "avgFeeUsd": 0.01989159530260558
+        },
+        {
+          "t": 40,
+          "avgLatency": 2.9863636363634667,
+          "failRate": 0,
+          "avgFeeUsd": 0.01731487474656747
+        },
+        {
+          "t": 45,
+          "avgLatency": 3.9159090909088685,
+          "failRate": 0,
+          "avgFeeUsd": 0.020185833710683217
+        },
+        {
+          "t": 50,
+          "avgLatency": 4.77968749999973,
+          "failRate": 0,
+          "avgFeeUsd": 0.018056306603756695
+        },
+        {
+          "t": 55,
+          "avgLatency": 5.952777777777445,
+          "failRate": 0,
+          "avgFeeUsd": 0.018158170210642748
+        },
+        {
+          "t": 60,
+          "avgLatency": 3.91999999999978,
+          "failRate": 0,
+          "avgFeeUsd": 0.02171061552408201
+        },
+        {
+          "t": 65,
+          "avgLatency": 3.4863636363634383,
+          "failRate": 0,
+          "avgFeeUsd": 0.019084285793504803
+        },
+        {
+          "t": 70,
+          "avgLatency": 2.396774193548251,
+          "failRate": 0,
+          "avgFeeUsd": 0.017148896994005916
+        },
+        {
+          "t": 75,
+          "avgLatency": 1.91842105263147,
+          "failRate": 0,
+          "avgFeeUsd": 0.013777848731239063
+        },
+        {
+          "t": 80,
+          "avgLatency": 2.1874999999998757,
+          "failRate": 0,
+          "avgFeeUsd": 0.013924864235379218
+        },
+        {
+          "t": 85,
+          "avgLatency": 2.2796296296295,
+          "failRate": 0,
+          "avgFeeUsd": 0.014085446953568115
+        },
+        {
+          "t": 90,
+          "avgLatency": 1.8603448275861012,
+          "failRate": 0,
+          "avgFeeUsd": 0.014328966506913442
+        },
+        {
+          "t": 95,
+          "avgLatency": 1.885185185185078,
+          "failRate": 0,
+          "avgFeeUsd": 0.014562717121130563
+        },
+        {
+          "t": 100,
+          "avgLatency": 2.584722222222075,
+          "failRate": 0,
+          "avgFeeUsd": 0.01489998398144112
+        },
+        {
+          "t": 105,
+          "avgLatency": 1.727499999999902,
+          "failRate": 0,
+          "avgFeeUsd": 0.015222598474405085
+        },
+        {
+          "t": 110,
+          "avgLatency": 2.1562499999998774,
+          "failRate": 0,
+          "avgFeeUsd": 0.015519009365608445
+        },
+        {
+          "t": 115,
+          "avgLatency": 1.9435897435896332,
+          "failRate": 0,
+          "avgFeeUsd": 0.015804099655059814
+        }
+      ]
+    },
+    "router: balanced": {
+      "submitted": 582,
+      "confirmed": 581,
+      "throughput": 4.841666666666667,
+      "failRate": 0.0017182130584192379,
+      "avgLatency": 2.187865748709023,
+      "p95Latency": 4.04999999999977,
+      "avgFeeUsd": 0.019515154756290808,
+      "share": {
+        "C": 155,
+        "B": 408,
+        "A": 18
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "avgLatency": 1.552173913043474,
+          "failRate": 0,
+          "avgFeeUsd": 0.022065980298913056
+        },
+        {
+          "t": 5,
+          "avgLatency": 2.122000000000014,
+          "failRate": 0,
+          "avgFeeUsd": 0.01707814392773438
+        },
+        {
+          "t": 10,
+          "avgLatency": 1.1423076923077085,
+          "failRate": 0,
+          "avgFeeUsd": 0.026453636715278037
+        },
+        {
+          "t": 15,
+          "avgLatency": 1.5611111111111333,
+          "failRate": 0,
+          "avgFeeUsd": 0.01973114406337124
+        },
+        {
+          "t": 20,
+          "avgLatency": 1.1750000000000167,
+          "failRate": 0,
+          "avgFeeUsd": 0.02698889410090561
+        },
+        {
+          "t": 25,
+          "avgLatency": 1.7236842105263381,
+          "failRate": 0,
+          "avgFeeUsd": 0.02162048271990734
+        },
+        {
+          "t": 30,
+          "avgLatency": 1.8685185185184512,
+          "failRate": 0,
+          "avgFeeUsd": 0.019021018081034118
+        },
+        {
+          "t": 35,
+          "avgLatency": 2.214999999999874,
+          "failRate": 0,
+          "avgFeeUsd": 0.022770110258392522
+        },
+        {
+          "t": 40,
+          "avgLatency": 3.1568181818180023,
+          "failRate": 0,
+          "avgFeeUsd": 0.01917921364556756
+        },
+        {
+          "t": 45,
+          "avgLatency": 2.9045454545452896,
+          "failRate": 0,
+          "avgFeeUsd": 0.023237974351551175
+        },
+        {
+          "t": 50,
+          "avgLatency": 4.443749999999747,
+          "failRate": 0,
+          "avgFeeUsd": 0.0221452950496538
+        },
+        {
+          "t": 55,
+          "avgLatency": 2.519444444444302,
+          "failRate": 0,
+          "avgFeeUsd": 0.0483902956526835
+        },
+        {
+          "t": 60,
+          "avgLatency": 2.7749999999998467,
+          "failRate": 0,
+          "avgFeeUsd": 0.04423762992022855
+        },
+        {
+          "t": 65,
+          "avgLatency": 2.0090909090907947,
+          "failRate": 0,
+          "avgFeeUsd": 0.015435609097786572
+        },
+        {
+          "t": 70,
+          "avgLatency": 1.9774193548385972,
+          "failRate": 0,
+          "avgFeeUsd": 0.01577613675800432
+        },
+        {
+          "t": 75,
+          "avgLatency": 1.5694444444443552,
+          "failRate": 0.052631578947368474,
+          "avgFeeUsd": 0.013014862718990583
+        },
+        {
+          "t": 80,
+          "avgLatency": 2.1874999999998757,
+          "failRate": 0,
+          "avgFeeUsd": 0.013084349603369762
+        },
+        {
+          "t": 85,
+          "avgLatency": 2.2796296296295,
+          "failRate": 0,
+          "avgFeeUsd": 0.013180808411799085
+        },
+        {
+          "t": 90,
+          "avgLatency": 1.7499999999999005,
+          "failRate": 0,
+          "avgFeeUsd": 0.015198663791694817
+        },
+        {
+          "t": 95,
+          "avgLatency": 1.885185185185078,
+          "failRate": 0,
+          "avgFeeUsd": 0.0134573734951981
+        },
+        {
+          "t": 100,
+          "avgLatency": 2.584722222222075,
+          "failRate": 0,
+          "avgFeeUsd": 0.013656830082550132
+        },
+        {
+          "t": 105,
+          "avgLatency": 1.727499999999902,
+          "failRate": 0,
+          "avgFeeUsd": 0.013849229786351716
+        },
+        {
+          "t": 110,
+          "avgLatency": 2.1562499999998774,
+          "failRate": 0,
+          "avgFeeUsd": 0.014026002277714835
+        },
+        {
+          "t": 115,
+          "avgLatency": 1.8358974358973315,
+          "failRate": 0,
+          "avgFeeUsd": 0.015558414398991909
+        }
+      ]
+    }
+  }
+}

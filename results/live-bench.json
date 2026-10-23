@@ -1,0 +1,277 @@
+[
+  {
+    "rate": 4,
+    "policy": "router: balanced",
+    "intents": 40,
+    "confirmed": 40,
+    "successRate": 1,
+    "avgLatencySec": 1.15265,
+    "p95LatencySec": 2.033,
+    "avgFeeUsd": 0.028144455769507592,
+    "share": {
+      "C": 40
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.395, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.493).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.565)."
+    ]
+  },
+  {
+    "rate": 4,
+    "policy": "router: cheapest",
+    "intents": 40,
+    "confirmed": 40,
+    "successRate": 1,
+    "avgLatencySec": 2.3785500000000006,
+    "p95LatencySec": 4.06,
+    "avgFeeUsd": 0.012265052063730998,
+    "share": {
+      "B": 40
+    },
+    "sampleDecision": [
+      "Selected Rollup B using the \"cheapest\" policy (score 0.332, lower is better).",
+      "vs Rollup C: 57% cheaper, 1.0s slower (their score 0.385).",
+      "vs Rollup A: 83% cheaper, 1.5s slower (their score 0.760)."
+    ]
+  },
+  {
+    "rate": 4,
+    "policy": "always A",
+    "intents": 40,
+    "confirmed": 40,
+    "successRate": 1,
+    "avgLatencySec": 0.6503500000000001,
+    "p95LatencySec": 1.03,
+    "avgFeeUsd": 0.0702354876661361,
+    "share": {
+      "A": 40
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.386, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.484).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.565)."
+    ]
+  },
+  {
+    "rate": 4,
+    "policy": "always B",
+    "intents": 40,
+    "confirmed": 40,
+    "successRate": 1,
+    "avgLatencySec": 1.9496749999999998,
+    "p95LatencySec": 3.866,
+    "avgFeeUsd": 0.01224001588155844,
+    "share": {
+      "B": 40
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.385, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.483).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.555)."
+    ]
+  },
+  {
+    "rate": 4,
+    "policy": "always C",
+    "intents": 40,
+    "confirmed": 40,
+    "successRate": 1,
+    "avgLatencySec": 1.0608,
+    "p95LatencySec": 2.039,
+    "avgFeeUsd": 0.02809023854748246,
+    "share": {
+      "C": 40
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.385, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.481).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.555)."
+    ]
+  },
+  {
+    "rate": 12,
+    "policy": "router: balanced",
+    "intents": 120,
+    "confirmed": 120,
+    "successRate": 1,
+    "avgLatencySec": 1.799916666666666,
+    "p95LatencySec": 4.03,
+    "avgFeeUsd": 0.018579325520909684,
+    "share": {
+      "C": 48,
+      "B": 72
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.383, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.481).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.555)."
+    ]
+  },
+  {
+    "rate": 12,
+    "policy": "router: cheapest",
+    "intents": 120,
+    "confirmed": 120,
+    "successRate": 1,
+    "avgLatencySec": 2.0157750000000005,
+    "p95LatencySec": 4.035,
+    "avgFeeUsd": 0.014880405368825185,
+    "share": {
+      "B": 100,
+      "C": 20
+    },
+    "sampleDecision": [
+      "Selected Rollup B using the \"cheapest\" policy (score 0.323, lower is better).",
+      "vs Rollup C: 56% cheaper, 1.0s slower (their score 0.381).",
+      "vs Rollup A: 83% cheaper, 1.5s slower (their score 0.753)."
+    ]
+  },
+  {
+    "rate": 12,
+    "policy": "always A",
+    "intents": 120,
+    "confirmed": 120,
+    "successRate": 1,
+    "avgLatencySec": 0.6382000000000001,
+    "p95LatencySec": 1.025,
+    "avgFeeUsd": 0.07022802799061881,
+    "share": {
+      "A": 120
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.382, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.480).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.555)."
+    ]
+  },
+  {
+    "rate": 12,
+    "policy": "always B",
+    "intents": 120,
+    "confirmed": 120,
+    "successRate": 1,
+    "avgLatencySec": 2.854700000000001,
+    "p95LatencySec": 4.833,
+    "avgFeeUsd": 0.01223781266914941,
+    "share": {
+      "B": 120
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.382, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.480).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.552)."
+    ]
+  },
+  {
+    "rate": 12,
+    "policy": "always C",
+    "intents": 120,
+    "confirmed": 105,
+    "successRate": 0.875,
+    "avgLatencySec": 8.299219047619047,
+    "p95LatencySec": 14.76,
+    "avgFeeUsd": 0.028089775848375406,
+    "share": {
+      "C": 105
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.382, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.479).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.552)."
+    ]
+  },
+  {
+    "rate": 20,
+    "policy": "router: balanced",
+    "intents": 200,
+    "confirmed": 200,
+    "successRate": 1,
+    "avgLatencySec": 3.2209600000000007,
+    "p95LatencySec": 5.851,
+    "avgFeeUsd": 0.01962970487707262,
+    "share": {
+      "C": 64,
+      "B": 128,
+      "A": 8
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.397, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.479).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.552)."
+    ]
+  },
+  {
+    "rate": 20,
+    "policy": "router: cheapest",
+    "intents": 200,
+    "confirmed": 200,
+    "successRate": 1,
+    "avgLatencySec": 4.764914999999998,
+    "p95LatencySec": 8.367,
+    "avgFeeUsd": 0.014773759046967911,
+    "share": {
+      "B": 168,
+      "C": 32
+    },
+    "sampleDecision": [
+      "Selected Rollup B using the \"cheapest\" policy (score 0.322, lower is better).",
+      "vs Rollup C: 56% cheaper, 1.0s slower (their score 0.389).",
+      "vs Rollup A: 83% cheaper, 1.5s slower (their score 0.751)."
+    ]
+  },
+  {
+    "rate": 20,
+    "policy": "always A",
+    "intents": 200,
+    "confirmed": 200,
+    "successRate": 1,
+    "avgLatencySec": 3.8076550000000013,
+    "p95LatencySec": 6.562,
+    "avgFeeUsd": 0.070227978241692,
+    "share": {
+      "A": 200
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.392, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.479).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.552)."
+    ]
+  },
+  {
+    "rate": 20,
+    "policy": "always B",
+    "intents": 200,
+    "confirmed": 200,
+    "successRate": 1,
+    "avgLatencySec": 5.781235000000001,
+    "p95LatencySec": 10.39,
+    "avgFeeUsd": 0.012237088731657447,
+    "share": {
+      "B": 200
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.392, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.479).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.551)."
+    ]
+  },
+  {
+    "rate": 20,
+    "policy": "always C",
+    "intents": 200,
+    "confirmed": 86,
+    "successRate": 0.43,
+    "avgLatencySec": 8.31040697674419,
+    "p95LatencySec": 15.013,
+    "avgFeeUsd": 0.028089586930639794,
+    "share": {
+      "C": 86
+    },
+    "sampleDecision": [
+      "Selected Rollup C using the \"balanced\" policy (score 0.392, lower is better).",
+      "vs Rollup B: 56% more expensive, 1.0s faster (their score 0.479).",
+      "vs Rollup A: 60% cheaper, 0.5s slower (their score 0.551)."
+    ]
+  }
+]
