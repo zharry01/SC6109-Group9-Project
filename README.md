@@ -76,36 +76,6 @@ intents/s for 10 s:
 | always B (cheap) | 100 % | 5.8 s | $0.0122 |
 | always C | 43 % | 8.3 s | $0.0281 |
 
-## Demo script (≈10 minutes)
-
-Step-by-step recording guide with narration: [docs/DEMO_RECORDING_GUIDE.md](docs/DEMO_RECORDING_GUIDE.md).
-
-1. **Architecture (1 min).** Slide with the diagram. Three rollups with different trade-offs;
-   the contracts on each; the router/relayer; the UI. Point out the settlement/DA assumption
-   line on each rollup card.
-2. **Simple transfer (1.5 min).** Type *"send 100 USDC to Bob as cheap as possible"* → Parse.
-   Show the route table: B chosen, the score bars, the explanation ("83 % cheaper, 1.5 s
-   slower"), and C excluded for Alice's insufficient balance. Sign & execute, then walk
-   through the stepper and log: signed EIP-712 intent → relayer tx → confirmed, estimated vs
-   actual latency.
-3. **Preference changes the route (1 min).** Same intent with **Fastest** → A. Switch the
-   user to Bob, **Cheapest** with *max latency 1.5 s* → C (B excluded: latency).
-4. **Merchant payment (0.5 min).** Payment, Bob → Coffee Shop, `ORDER-1001`, fastest.
-5. **Swap and liquidity (1.5 min).** Swap 300 USDC → WETH: B has the better price. Swap 3000
-   USDC: B and C are excluded for price impact (shallow pools) and A wins. Show "You receive"
-   and the impact column.
-6. **Congestion (1.5 min).** Click **Congest** on B: pending txs jump, its gas price and
-   latency rise, and the same cheapest intent now goes elsewhere. Explain the validity-window
-   exclusion. Wait ~30 s and B recovers.
-7. **Outage and safe re-routing (1.5 min).** Tick *Simulate a sequencer outage*, execute.
-   The chosen rollup halts, its card turns **STALLED**, and the intent times out at the 15 s
-   deadline → re-routed → confirmed. Explain why waiting for the deadline prevents double
-   execution, then click **Resume** and show (tx status / balances tab) that the stale fill
-   reverted.
-8. **Analysis (1.5 min).** Live analytics tab (router vs "always X" on the same quotes), then the
-   Scalability simulation tab: throughput, failure-rate, fee and incident charts, and the
-   trust/centralisation discussion from DESIGN.md §8.
-
 ## Project structure
 
 ```
@@ -121,8 +91,7 @@ public/              frontend (vanilla JS, Chart.js)
 scripts/             demo.js, chains.js, sim.js, bench-live.js
 test/unit, test/e2e  Node test runner suites
 results/             generated benchmark/simulation outputs
-docs/                DESIGN.md (architecture, algorithm, trust), DEV_LOG.md (AI usage, bugs),
-                     DEMO_RECORDING_GUIDE.md (video steps + narration)
+docs/                DESIGN.md (architecture, algorithm, trust), DEV_LOG.md (AI usage, bugs), CONTRIBUTIONS.md (individual contribution report)
 ```
 
 ## API
